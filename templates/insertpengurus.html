@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block title %} Tambahkan Pengurus {% endblock %}
+{% block content %}
+
+<div class="col">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Tambah Pengurus</h6>
+        </div>
+        <div class="card-body">
+            <a href="/pengurus" class="btn btn-success btn-icon-split">
+                <span class="icon text-white-50">
+                    <i class="fas fa-arrow-left"></i>
+                </span>
+                <span class="text">Lihat Pengurus</span>
+            </a>
+            <hr>
+            <form class="user" action="/pengurusProses" method="post">
+                <div class="form-group">
+                    <input type="email" class="form-control form-control-user" name="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control form-control-user" name="password"
+                        placeholder="Password">
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-user" name="nama"
+                                placeholder="Nama Pengurus">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-user" name="telepon"
+                                placeholder="Nomor Telepon">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <h6>Status : </h6>
+                            <input type="radio" name="status" value="Sedang diproses" checked="checked">
+                            <label>Pengurus</label><br>
+                            <input type="radio" name="status" value="Selesai">
+                            <label>Admin</label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" href="/index" class="btn btn-primary btn-user btn-block">
+                    Tambah Data
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% block chart %} {% endblock %}
+{% endblock %}

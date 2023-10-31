@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block title %} Pesanan {% endblock %}
+{% block content %}
+
+<div class="col">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Data Pesanan</h6>
+        </div>
+        <div class="card-body">
+            <a href="/insertpesanan" class="btn btn-success btn-icon-split">
+                <span class="icon text-white-50">
+                    <i class="fas fa-plus"></i>
+                </span>
+                <span class="text">Tambah Data</span>
+            </a>
+            <hr>
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Pesanan</th>
+                            <th>Tanggal</th>
+                            <th>Pembeli</th>
+                            <th>Telepon</th>
+                            <th>Alamat</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Seperangkat alat sholat</td>
+                            <td>2023/03/01</td>
+                            <td>Innama Maesa Putri</td>
+                            <td>087759716075</td>
+                            <td>Jl. Kol. Sugiono 3B</td>
+                            <td>Selesai</td>
+                            <td>
+                                <div class="row">
+                                    <div class="col">
+                                        <a class="btn btn-primary btn-sm" href="#"><i class="fas fa-pen"></i></a>
+                                    </div>
+                                    <div class="col">
+                                        <a class="btn btn-danger btn-sm" href="#"><i class="fas fa-trash"></i></a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% block chart %} {% endblock %}
+{% endblock %}
